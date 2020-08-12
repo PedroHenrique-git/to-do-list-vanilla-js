@@ -13,7 +13,7 @@
 </h1>
 
 <p align="left">
-    Clonar projeto: git clone https://github.com/PedroHenrique-git/Cronometro-JavaScript.git
+    Clonar projeto: git clone https://github.com/PedroHenrique-git/ToDoList-UsandoJavaScripuro.git
 </p>
 
  ![VISUAL](/imagens/img1.PNG)
