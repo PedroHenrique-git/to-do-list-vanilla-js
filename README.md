@@ -1,23 +1,31 @@
-<h1>Task List</h1>
+# To do list vanilla js
+## Description
 
-<p>
-  Task list developed using JavaScript, html and css. LocalStorage was used as data persistence.
-</p>
+a website to track your tasks
 
 ## Getting Started
 
-open the index.html file
+you can see the app online here: https://pedrohenrique-git.github.io/to-do-list-vanilla-js/
 
-## Built With
+### Dependencies
 
-<p align="left">
-    <ul>
-        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML">Html</a></li>
-        <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">Css</a></li>
-        <li><a href="https://developer.mozilla.org/pt-BR/docs/Aprender/JavaScript">JavaScript</a></li>
-    </ul>
-</p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Html</a><br/>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Css</a><br/>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a><br/>
+<a href="https://webpack.js.org/">Webpack</a><br/>
+
+### Installing
+
+execute the command: <b>npm i</b>
+
+### Executing program
+
+execute the commands: <b>npm run dev</b> and open the <b>index.html</b>
+
+## Authors
+
+Pedro Henrique
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the [MIT] License - see the LICENSE.md file for details
