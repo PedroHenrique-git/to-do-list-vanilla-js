@@ -1,5 +1,4 @@
 import { createTask } from './createItems';
-import { addTaskInLocalStorage } from './localStorageFunctions';
 import { addTask } from './addTask';
 
 export function handleSubmit (e, input) {
