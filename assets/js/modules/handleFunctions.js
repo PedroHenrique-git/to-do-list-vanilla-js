@@ -24,10 +24,10 @@ export function handleEdit (element, arr) {
     taskName.readOnly = false;
     taskName.classList.add('input_style');
     taskName.addEventListener('focusout', function() {
-        this.readOnly = true
+        this.readOnly = true;
         this.classList.remove('input_style');
         arr[index].name = this.value;
+        const newArr = JSON.stringify(arr);
+        localStorage.setItem('tasks', newArr);
     });
-    console.log(arr);
-    localStorage.setItem('tasks', JSON.stringify(arr));
 };
