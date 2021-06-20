@@ -1,17 +1,16 @@
-let tasks = [];
+import { addTask } from './addTask';
+import { createTask } from './createItems';
 
-if( localStorage.getItem('tasks') ) {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
-}
+const arr = [];
 
 export function addTaskInLocalStorage (id, name) {
-    tasks.push({ id: id, name: name });
-    localStorage.setItem('tasks', JSON.stringify(tasks));    
+    arr.push({ id: id, name: name });
+    localStorage.setItem('tasks', JSON.stringify(arr));    
 }
 
 export function renderTasksInLocalStorage (tasks) {
     tasks.forEach((task) => {
-        const newTask = createTask(task.name);
+        const newTask = createTask(task.name, task.id);
         addTask(newTask);
     });
 }

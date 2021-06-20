@@ -19,7 +19,7 @@ export function createActionContainer () {
     return div;
 };
 
-export function createTask (taskName) {
+export function createTask (taskName, id = randomId(0, 1000)) {
     const li = document.createElement('li');
     const inputText = document.createElement('input');
 
@@ -27,7 +27,7 @@ export function createTask (taskName) {
     inputText.readOnly = true;
     inputText.classList.add('task_name');
 
-    li.setAttribute('id', `${randomId(0, 1000)}`);
+    li.setAttribute('id', `${id}`);
     li.appendChild(inputText);
     li.appendChild(createActionContainer());
     addTaskInLocalStorage(li.id, taskName);
