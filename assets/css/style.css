@@ -1,6 +1,7 @@
 :root {
     --preto: #000;
     --branco: #fff;
+    --cinza: #cecece;
 }
 * {
     margin: 0;
@@ -19,7 +20,7 @@ body {
 }
 
 .main_container {
-    background: #ffffff;
+    background: var(--branco);
     border-radius: 20px;
     margin:  50px auto 0 auto;
     padding: 25px;
@@ -38,7 +39,7 @@ body {
 }
 
 .main_container .conteudo .task_form input {
-    border: 1px solid #cecece;
+    border: 1px solid var(--cinza);
     border-radius: 20px;
     color: var(--preto); 
     height: 35px;
@@ -82,7 +83,7 @@ body {
 }
 
 .input_style {
-    border: 1px solid #cecece !important;
+    border: 1px solid var(--cinza) !important;
     border-radius: 20px;
     height: 30px;
     padding: 10px;
@@ -109,6 +110,7 @@ body {
 .edit_task::before {
     background: url('../images/edit_icon.png');
     background-size: contain;
+    background-repeat: no-repeat;
     content: '';
     height: 32px;
     width: 32px;
@@ -121,7 +123,28 @@ body {
 .delete_task::before {
     background: url('../images/delete_icon.png');
     background-size: contain;
+    background-repeat: no-repeat;
     content: '';
     height: 32px;
     width: 32px;
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 20px;
+    }
+    .main_container .conteudo .task_form input {
+        width: 200px;
+    }
+    .tasks_list  li .task_name {
+        width: 200px;
+    }
+    .edit_task::before, .delete_task::before {
+        height: 24px;
+        width: 24px;
+    }
+    .edit_task, .delete_task {
+        height: 32px;
+        width: 32px;    
+    }
 }

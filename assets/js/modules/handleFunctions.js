@@ -6,15 +6,17 @@ export function handleSubmit (e, input) {
     if( input.value.length === 0 ) return;
     const newTask = createTask(input.value);
     addTask(newTask);
-    input.value === '';
+    input.value = '';
 }
 
 export function handleDelete (element, arr) {
-    const id = element.parentElement.parentElement.id;
-    const index = arr.findIndex((task) => task.id === id);
-    arr.splice(index, 1);
-    localStorage.setItem('tasks', JSON.stringify(arr));
-    element.parentElement.parentElement.remove();
+    if(confirm('are you sure you want to delete this task ?')) {
+        const id = element.parentElement.parentElement.id;
+        const index = arr.findIndex((task) => task.id === id);
+        arr.splice(index, 1);
+        localStorage.setItem('tasks', JSON.stringify(arr));
+        element.parentElement.parentElement.remove();
+    }
 };
 
 export function handleEdit (element, arr) {
